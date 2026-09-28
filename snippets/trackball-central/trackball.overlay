@@ -22,16 +22,43 @@
 };
 
 // セントラルのリスナーを有効化し、deviceを紐付け
+// レイヤー番号は config/lism.keymap に対応（4=MOUSE, 5=SCROLL, 7/8=GESTURE）
 &central_listener {
     status = "okay";
     device = <&trackball_central>;
-    input-processors = 
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    input-processors =
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_temp_layer 4 5000>;
+
+    gesture {
+        layers = <7>;
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_mouse_gesture>,
+            <&zip_xy_scaler 0 1>;
+    };
+
+    gesture_l8 {
+        layers = <8>;
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_mouse_gesture_l8>,
+            <&zip_xy_scaler 0 1>;
+    };
 
     scroller {
-        layers = <2>;
-        input-processors = 
+        layers = <5>;
+        input-processors =
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_scaler 1 16>;
+    };
+};
+
+// トラックボールを動かすと MOUSE レイヤーを一時的に有効化（オートマウス）
+/ {
+    /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        require-prior-idle-ms = <350>;
     };
 };
