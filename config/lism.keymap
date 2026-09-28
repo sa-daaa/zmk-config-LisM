@@ -43,7 +43,7 @@
 
         num {
             bindings = <&tog 2>;
-            key-positions = <27 28 29>;
+            key-positions = <39 40 41>;
         };
 
         BT1 {
@@ -71,19 +71,14 @@
             key-positions = <20 21>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <23 24>;
-        };
-
         zengamen {
             bindings = <&kp LG(UP_ARROW)>;
             key-positions = <5 15>;
         };
 
-        layer6 {
-            bindings = <&to 6>;
-            key-positions = <0 10>;
+        rightclike {
+            bindings = <&mkp RCLK>;
+            key-positions = <19 18>;
         };
     };
 
@@ -188,105 +183,106 @@
         default_layer {
             display-name = "SADBACE";
             bindings = <
-&mt COLON Q     &kp W         &kp E                       &kp R      &kp T                                                                    &kp Y        &kp U    &kp I        &kp O       &kp P
-&kp A           &kp S         &kp D                       &kp F      &kp G                                                                    &kp H        &kp J    &kp K        &kp L       &mt EQUAL MINUS
-&kp Z           &kp X         &kp C                       &kp V      &kp B                                                                    &kp N        &lt 8 M  &lt 7 COMMA  &kp PERIOD  &lt 5 SLASH
-&mt LCTRL TAB   &kp LEFT_GUI  &mt LEFT_ALT INT_MUHENKAN   &kp UP     &lt 3 INT_HENKAN  &mt LSHIFT BACKSPACE      &lt 1 ENTER  &lt 2 SPACE  &none        &kp ESCAPE  &mo 6    &mt RSHIFT DELETE
-                              &kp LEFT                    &kp DOWN   &kp RIGHT                                                                &none        &none    &none
+&mt COLON Q    &kp W         &kp E                      &kp R     &kp T                                             &kp Y             &kp U    &kp I        &kp O       &kp P
+&kp A          &kp S         &kp D                      &kp F     &kp G                                             &kp H             &kp J    &kp K        &kp L       &mkp LCLK
+&kp Z          &kp X         &kp C                      &kp V     &kp B                                             &kp N             &lt 8 M  &lt 7 COMMA  &kp PERIOD  &lt 5 MINUS
+&mt LCTRL TAB  &kp LEFT_GUI  &mt LEFT_ALT INT_MUHENKAN  &kp UP    &lt 3 SPACE  &mt LSHIFT BACKSPACE    &lt 1 ENTER  &lt 2 INT_HENKAN  &none    &kp ESCAPE   &kp SLASH   &mt RSHIFT DELETE
+                             &kp LEFT                   &kp DOWN  &kp RIGHT                                         &none             &none    &none
             >;
         };
 
         KIGO {
             display-name = "KIGO";
             bindings = <
-&kp COLON      &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS                                                &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &trans  &trans
-&kp SEMICOLON  &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &kp ASTERISK                                            &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans     &trans  &kp UNDERSCORE
-&kp EQUAL      &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp HASH               &kp PERIOD                                              &kp LS(LC(N))     &trans             &trans     &trans  &kp QMARK
-&kp AT         &trans           &trans                &kp HOME               &trans        &kp LEFT_SHIFT      &trans  &trans        &trans            &trans             &trans     &kp LA(F4)
-                                &trans                &kp END                &trans                                                  &trans            &trans             &trans
+&kp COLON      &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS                                &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &trans  &trans
+&kp SEMICOLON  &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &kp ASTERISK                            &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans     &trans  &kp UNDERSCORE
+&kp EQUAL      &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp HASH               &kp PERIOD                              &kp LS(LC(N))     &trans             &trans     &trans  &kp QMARK
+&kp AT         &trans           &trans                &kp HOME               &trans        &kp LEFT_SHIFT    &trans  &trans            &trans             &trans     &trans  &kp LA(F4)
+                                &trans                &kp END                &trans                                  &trans            &trans             &trans
             >;
         };
 
         NUM {
             display-name = "NUM";
             bindings = <
-&kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                &trans  &kp F7  &kp F8  &kp F9  &kp F10
-&kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK                                            &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&kp EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD                                              &trans  &kp F1  &kp F2  &kp F3  &kp F12
-&kp TAB    &kp KP_NUMBER_0  &kp LEFT_ALT     &trans           &kp SPACE     &kp BACKSPACE      &kp ENTER  &trans      &trans  &trans  &trans  &tog 0
-                            &trans           &trans           &trans                                                  &trans  &trans  &trans
+&kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                  &trans     &kp F7  &kp F8  &kp F9  &kp F10
+&kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK                              &trans     &kp F4  &kp F5  &kp F6  &kp F11
+&kp EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD                                &kp LG(E)  &kp F1  &kp F2  &kp F3  &kp F12
+&kp TAB    &kp KP_NUMBER_0  &kp LEFT_ALT     &kp LC(A)        &kp SPACE     &kp BACKSPACE    &kp ENTER  &trans     &trans  &trans  &trans  &tog 0
+                            &kp LC(C)        &kp LC(Z)        &kp LC(V)                                 &trans     &trans  &trans
             >;
         };
 
         ARROW {
             display-name = "ARROW";
             bindings = <
-&kp LC(HOME)  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &kp LC(END)                                 &trans       &kp LA(LEFT_ARROW)  &kp UP_ARROW  &kp LA(RIGHT_ARROW)  &trans
-&kp HOME      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END                                     &kp PAGE_UP  &kp LEFT            &kp DOWN      &kp RIGHT            &kp PAGE_DOWN
-&kp LS(HOME)  &trans           &trans          &trans           &kp LS(END)                                 &trans       &kp LC(PAGE_UP)     &trans        &kp LC(PAGE_DOWN)    &trans
-&kp LCTRL     &kp ESCAPE       &trans          &kp PAGE_UP      &trans       &trans        &trans  &trans   &trans       &trans              &trans        &trans
-                               &kp HOME        &kp PAGE_DOWN    &kp END                                     &trans       &trans              &trans
+&kp LC(HOME)  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &kp LC(END)                    &trans       &kp LA(LEFT_ARROW)  &kp UP_ARROW  &kp LA(RIGHT_ARROW)  &trans
+&kp HOME      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END                        &kp PAGE_UP  &kp LEFT            &kp DOWN      &kp RIGHT            &kp PAGE_DOWN
+&kp LS(HOME)  &trans           &trans          &trans           &kp LS(END)                    &trans       &kp LC(PAGE_UP)     &trans        &kp LC(PAGE_DOWN)    &trans
+&kp LCTRL     &kp ESCAPE       &trans          &kp PAGE_UP      &trans       &trans    &trans  &trans       &trans              &trans        &trans               &trans
+                               &kp HOME        &kp PAGE_DOWN    &kp END                        &trans       &trans              &trans
             >;
         };
 
         MOUSE {
             display-name = "MOUSE";
             bindings = <
-&to_layer_0 Q    &to_layer_0 W  &to_layer_0 E             &to_layer_0 R     &to_layer_0 T                                                  &to_layer_0 Y  &kp LC(C)           &to_layer_0 LC(V)       &to_layer_0 O       &to_layer_0 P
-&to_layer_0 A    &to_layer_0 S  &to_layer_0 D             &to_layer_0 F     &to_layer_0 G                                                  &to_layer_0 H  &mkp MB1            &mkp_exit_AML MB2       &to_layer_0 L       &to_layer_0 MINUS
-&to_layer_0 Z    &to_layer_0 X  &to_layer_0 C             &to_layer_0 V     &to_layer_0 B                                                  &to_layer_0 N  &lt_to_layer_0 8 M  &lt_to_layer_0 7 COMMA  &to_layer_0 PERIOD  &lt_to_layer_0 5 SLASH
-&to_layer_0 TAB  &kp LEFT_GUI   &to_layer_0 INT_MUHENKAN  &to_layer_0 UP    &to_layer3     &to_layer_0 BACKSPACE      &to_layer1  &to_layer2  &trans         &to_layer_0 ESCAPE  &trans                  &to_layer_0 DELETE
-                                &to_layer_0 LEFT          &to_layer_0 DOWN  &to_layer_0 RIGHT                                              &trans         &trans              &trans
+&to_layer_0 Q    &to_layer_0 W  &to_layer_0 E             &to_layer_0 R     &to_layer_0 T                                           &to_layer_0 Y  &kp LC(C)           &to_layer_0 LC(V)       &to_layer_0 O       &to_layer_0 P
+&to_layer_0 A    &to_layer_0 S  &to_layer_0 D             &to_layer_0 F     &to_layer_0 G                                           &to_layer_0 H  &to_layer_0 J       &mkp_exit_AML MB2       &to_layer_0 L       &mkp_exit_AML LCLK
+&to_layer_0 Z    &to_layer_0 X  &to_layer_0 C             &to_layer_0 V     &to_layer_0 B                                           &to_layer_0 N  &lt_to_layer_0 8 M  &lt_to_layer_0 7 COMMA  &to_layer_0 PERIOD  &lt_to_layer_0 5 SLASH
+&to_layer_0 TAB  &kp LEFT_GUI   &to_layer_0 INT_MUHENKAN  &to_layer_0 UP    &to_layer3         &to_layer_0 BACKSPACE    &to_layer1  &to_layer2     &trans              &to_layer_0 ESCAPE      &trans              &to_layer_0 DELETE
+                                &to_layer_0 LEFT          &to_layer_0 DOWN  &to_layer_0 RIGHT                                       &trans         &trans              &trans
             >;
         };
 
         SCROLL {
             display-name = "SCROLL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans                                  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans                    &trans  &trans  &trans
             >;
         };
 
         BLUETOOTH {
             display-name = "BLUETOOTH";
             bindings = <
-&trans  &trans        &trans        &trans        &trans                                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans                                         &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                                         &trans        &trans        &trans        &trans        &trans
-&to 0   &trans        &trans        &trans        &trans  &trans         &studio_unlock  &trans  &trans        &bootloader   &trans        &bt BT_CLR_ALL
-                      &trans        &trans        &trans                                         &trans        &trans        &trans
+&trans  &trans        &trans        &trans        &trans                            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans        &trans        &trans        &trans                            &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                            &trans        &trans        &trans        &trans        &trans
+&to 0   &trans        &trans        &trans        &trans  &trans    &studio_unlock  &trans        &trans        &bootloader   &trans        &bt BT_CLR_ALL
+                      &trans        &trans        &trans                            &trans        &trans        &trans
             >;
         };
 
         GESTURE {
             display-name = "GESTURE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans                                  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans                    &trans  &trans  &trans
             >;
         };
 
         GESTURE2 {
             display-name = "GESTURE2";
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans                                  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans                    &trans  &trans  &trans
             >;
         };
     };
 };
 
 // レイヤー7: 画面・ウィンドウ操作ジェスチャー
+
 &zip_mouse_gesture {
     stroke-size = <200>;
     enable-eager-mode;
@@ -316,6 +312,7 @@
 
 / {
     // レイヤー8: 編集操作ジェスチャー
+
     zip_mouse_gesture_l8: zip_mouse_gesture_l8 {
         compatible = "zmk,input-processor-mouse-gesture";
         #input-processor-cells = <0>;
