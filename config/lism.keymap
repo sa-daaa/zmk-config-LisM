@@ -194,11 +194,11 @@
         KIGO {
             display-name = "KIGO";
             bindings = <
-&kp COLON      &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS                                &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &trans  &trans
-&kp SEMICOLON  &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &kp ASTERISK                            &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans     &trans  &kp UNDERSCORE
-&kp EQUAL      &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp HASH               &kp PERIOD                              &kp LS(LC(N))     &trans             &trans     &trans  &kp QMARK
-&kp AT         &trans           &trans                &kp HOME               &trans        &kp LEFT_SHIFT    &trans  &trans            &trans             &trans     &trans  &kp LA(F4)
-                                &trans                &kp END                &trans                                  &trans            &trans             &trans
+&kp COLON      &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS                                   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &trans  &trans
+&kp SEMICOLON  &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &kp ASTERISK                               &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans     &trans  &kp UNDERSCORE
+&kp EQUAL      &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp HASH               &kp PERIOD                                 &kp LS(LC(N))     &trans             &trans     &trans  &kp QMARK
+&kp AT         &trans           &trans                &kp UP_ARROW           &trans           &kp LEFT_SHIFT    &trans  &trans            &trans             &trans     &trans  &kp LA(F4)
+                                &kp LEFT              &kp DOWN_ARROW         &kp RIGHT_ARROW                            &trans            &trans             &trans
             >;
         };
 
