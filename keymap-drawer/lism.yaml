@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: lism}
 layers:
-  Default Layer:
-  - Q
+  SADBACE:
+  - {t: Q, h: ':'}
   - W
   - E
   - R
@@ -12,73 +12,266 @@ layers:
   - O
   - P
   - A
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: G, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: H, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: Mark Layer}
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - $$mdi:mouse-left-click-outline$$
   - Z
   - X
   - C
   - V
   - B
   - N
-  - M
-  - ','
-  - .
+  - {t: M, h: GESTURE2}
+  - {t: ',', h: GESTURE}
+  - PERIOD
+  - {t: '-', h: SCROLL}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
+  - $$mdi:apple-keyboard-command$$
+  - {t: INT MUHENKAN, h: '$$mdi:apple-keyboard-option$$'}
+  - $$mdi:pan-up$$
+  - {t: '$$mdi:keyboard-space$$', h: ARROW}
+  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-return$$', h: KIGO}
+  - {t: INT HENKAN, h: NUM}
+  - ''
+  - $$mdi:apple-keyboard-shift$$
   - /
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Device Layer}
-  - {t: Mouse Layer, h: toggle}
-  - {t: '$$mdi:keyboard-tab$$', h: Mouse Layer}
-  - $$mdi:pan-up$$
-  - {t: '$$mdi:keyboard-space$$', h: Number Layer}
-  - {t: '$$mdi:keyboard-esc$$', h: Mark Layer}
-  - {t: '$$mdi:backspace$$', h: Mark Layer}
-  - {t: '$$mdi:keyboard-return$$', h: Number Layer}
-  - $$mdi:pan-up$$
-  - F7
-  - F10
-  - {t: F12, h: Device Layer}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:pan-left$$
   - $$mdi:pan-down$$
   - $$mdi:pan-right$$
-  - $$mdi:pan-left$$
-  - $$mdi:pan-down$$
-  - $$mdi:pan-right$$
-  Mouse Layer:
+  - ''
+  - ''
+  - ''
+  KIGO:
+  - ':'
+  - SQT
+  - (
+  - )
+  - +
+  - '['
+  - ']'
+  - '-'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ;
+  - $
+  - '%'
+  - '&'
+  - '*'
+  - '{'
+  - '}'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - UNDERSCORE
+  - '='
+  - '!'
+  - '"'
+  - '#'
+  - PERIOD
+  - Sft+Ctl+N
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - QMARK
+  - AT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:keyboard-space$$
-  - $$mdi:page-previous-outline$$
-  - $$mdi:page-next-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - {t: ▽, type: trans}
-  - '&mkp MB5'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:format-vertical-align-top$$
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-right-click-outline$$
-  - $$mdi:pan-up$$
-  - $$mdi:pan-down$$
-  - '&mkp MB4'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:format-vertical-align-bottom$$
-  - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
+  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Alt+F4
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  NUM:
+  - '-'
+  - KP 7
+  - KP 8
+  - KP 9
+  - +
+  - {t: ▽, type: trans}
+  - F7
+  - F8
+  - F9
+  - F10
+  - /
+  - KP 4
+  - KP 5
+  - KP 6
+  - '*'
+  - {t: ▽, type: trans}
+  - F4
+  - F5
+  - F6
+  - F11
+  - '='
+  - KP 1
+  - KP 2
+  - KP 3
+  - PERIOD
+  - Gui+E
+  - F1
+  - F2
+  - F3
+  - F12
+  - $$mdi:keyboard-tab$$
+  - KP 0
+  - $$mdi:apple-keyboard-option$$
+  - Ctl+A
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: SADBACE, h: toggle}
+  - Ctl+C
+  - Ctl+Z
+  - Ctl+V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  ARROW:
+  - Ctl+HOME
+  - Ctl+Sft+$$mdi:keyboard-tab$$
+  - $$mdi:arrow-up-bold$$
+  - Ctl+$$mdi:keyboard-tab$$
+  - Ctl+END
+  - {t: ▽, type: trans}
+  - Alt+$$mdi:arrow-left-bold$$
+  - $$mdi:arrow-up-bold$$
+  - Alt+$$mdi:arrow-right-bold$$
+  - {t: ▽, type: trans}
+  - HOME
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - END
+  - PgUp
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - PgDn
+  - Sft+HOME
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+END
+  - {t: ▽, type: trans}
+  - Ctl+PgUp
+  - {t: ▽, type: trans}
+  - Ctl+PgDn
+  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:keyboard-esc$$
+  - {t: ▽, type: trans}
+  - PgUp
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - PgDn
+  - END
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  MOUSE:
+  - '&to_layer_0 Q'
+  - '&to_layer_0 W'
+  - '&to_layer_0 E'
+  - '&to_layer_0 R'
+  - '&to_layer_0 T'
+  - '&to_layer_0 Y'
+  - Ctl+C
+  - '&to_layer_0 LC(V)'
+  - '&to_layer_0 O'
+  - '&to_layer_0 P'
+  - '&to_layer_0 A'
+  - '&to_layer_0 S'
+  - '&to_layer_0 D'
+  - '&to_layer_0 F'
+  - '&to_layer_0 G'
+  - '&to_layer_0 H'
+  - '&to_layer_0 J'
+  - '&to_layer_0 K'
+  - '&to_layer_0 L'
+  - '&mkp_exit_AML LCLK'
+  - '&to_layer_0 Z'
+  - '&to_layer_0 X'
+  - '&to_layer_0 C'
+  - '&to_layer_0 V'
+  - '&to_layer_0 B'
+  - '&to_layer_0 N'
+  - {t: '&to_layer_0 M', h: GESTURE2}
+  - {t: '&to_layer_0 COMMA', h: GESTURE}
+  - '&to_layer_0 PERIOD'
+  - {t: '&to_layer_0 SLASH', h: SCROLL}
+  - '&to_layer_0 TAB'
+  - $$mdi:apple-keyboard-command$$
+  - '&to_layer_0 INT_MUHENKAN'
+  - '&to_layer_0 UP'
+  - '&to_layer3'
+  - '&to_layer_0 BACKSPACE'
+  - '&to_layer1'
+  - '&to_layer2'
+  - {t: ▽, type: trans}
+  - '&to_layer_0 ESCAPE'
+  - {t: ▽, type: trans}
+  - '&to_layer_0 DELETE'
+  - '&to_layer_0 LEFT'
+  - '&to_layer_0 DOWN'
+  - '&to_layer_0 RIGHT'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  SCROLL:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -89,159 +282,183 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:arrow-down-bold$$
-  - {t: ▽, type: trans}
-  - Gui+W
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Number Layer:
-  - {t: ▽, type: trans}
-  - '7'
-  - '8'
-  - '9'
-  - '='
-  - F1
-  - F2
-  - F7
-  - F10
-  - $$mdi:apple-keyboard-shift$$
-  - '*'
-  - {t: '4', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '5', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '6', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '-', h: '$$mdi:apple-keyboard-control$$'}
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:arrow-right-bold$$
-  - $$mdi:apple-keyboard-command$$
-  - /
-  - '1'
-  - '2'
-  - '3'
-  - +
-  - $$mdi:mouse-right-click-outline$$
-  - ''
-  - $$mdi:arrow-down-bold$$
-  - ''
-  - $$mdi:apple-keyboard-option$$
-  - {t: ▽, type: trans}
-  - .
-  - '0'
-  - $$mdi:arrow-up-bold$$
-  - {t: LANG2, type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LANG1
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:skip-previous-outline$$
-  - $$mdi:skip-next-outline$$
-  - F12
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  Mark Layer:
-  - Sft+Gui+4
-  - F4
-  - (
-  - )
-  - ''
-  - '~'
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '&emoji'
-  - F5
-  - '['
-  - ']'
-  - ''
-  - '`'
-  - _
-  - ''''
-  - '"'
-  - {t: \, type: held}
-  - KP NUMLOCK
-  - F11
-  - '{'
-  - '}'
-  - ''
-  - '|'
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '0'
-  - {t: ▽, type: trans}
-  - $$mdi:keyboard-space$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Device Layer:
-  - ''
-  - ''
-  - ''
-  - ''
-  - BT CLR
+  BLUETOOTH:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - {t: '$$mdi:progress-download$$', type: held}
-  - BT CLR ALL
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BT CLR
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: SADBACE, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - $$mdi:lock-open-variant-outline$$
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - $$mdi:progress-download$$
   - {t: ▽, type: trans}
+  - BT CLR ALL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  GESTURE:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  GESTURE2:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [8, 9]
+  k: Gui+L
+- p: [39, 40, 41]
+  k: {t: NUM, h: toggle}
+- p: [5, 6]
+  k: {h: '2', s: '$$mdi:bluetooth-connect$$'}
+- p: [15, 16]
+  k: {h: '3', s: '$$mdi:bluetooth-connect$$'}
+- p: [4, 14]
+  k: Gui+Sft+$$mdi:arrow-left-bold$$
+- p: [30, 31]
+  k: PRINTSCREEN
+- p: [20, 21]
+  k: Gui+Sft+S
+- p: [5, 15]
+  k: Gui+$$mdi:arrow-up-bold$$
+- p: [19, 18]
+  k: $$mdi:mouse-right-click-outline$$
+- p: [2, 3, 4]
+  k: {t: BLUETOOTH, h: toggle}
