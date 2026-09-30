@@ -31,11 +31,6 @@
     combos {
         compatible = "zmk,combos";
 
-        muhennkann {
-            bindings = <&kakko>;
-            key-positions = <13 14>;
-        };
-
         kyu-kei {
             bindings = <&kp LG(L)>;
             key-positions = <8 9>;
@@ -79,6 +74,11 @@
         rightclike {
             bindings = <&mkp RCLK>;
             key-positions = <19 18>;
+        };
+
+        bt {
+            bindings = <&to 6>;
+            key-positions = <2 3 4>;
         };
     };
 
