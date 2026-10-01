@@ -40,7 +40,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: KIGO}
   - {t: INT HENKAN, h: NUM}
   - ''
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:keyboard-tab$$', h: ARROW}
   - /
   - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:pan-left$$
