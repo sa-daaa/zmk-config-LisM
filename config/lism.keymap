@@ -289,13 +289,14 @@
     idle-timeout-ms = <150>;
     gesture-cooldown-ms = <300>;
 
+    // 上下は実機の操作感に合わせて入れ替え済み（下=Win+D / 上=Win+Tab）
     task_view {
-        pattern = <GESTURE_UP>;
+        pattern = <GESTURE_DOWN>;
         bindings = <&kp LG(D)>;
     };
 
     show_desk {
-        pattern = <GESTURE_DOWN>;
+        pattern = <GESTURE_UP>;
         bindings = <&kp LG(TAB)>;
     };
 
