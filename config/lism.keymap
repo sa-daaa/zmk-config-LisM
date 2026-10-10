@@ -91,7 +91,7 @@
         };
 
         layer5 {
-            bindings = <&tog 5>;
+            bindings = <&mo 5>;
             key-positions = <17 18>;
         };
     };
