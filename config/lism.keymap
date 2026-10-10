@@ -19,6 +19,15 @@
 // レイヤー:
 //   0 SADBACE / 1 KIGO / 2 NUM / 3 ARROW / 4 MOUSE（自動）/ 5 SCROLL
 //   6 BLUETOOTH / 7 GESTURE（画面操作）/ 8 GESTURE2（編集操作）
+//
+// JIS 配列（OS 側が日本語キーボード設定）前提のキーコードで記述している。
+// Keymap Editor は US 表記で表示するため、記号は表示と出力が異なる:
+//   @ = LEFT_BRACKET     [ = RIGHT_BRACKET     ] = NON_US_HASH
+//   { = LS(RIGHT_BRACKET) } = LS(NON_US_HASH)  : = SQT    * = LS(SQT)
+//   = = LS(MINUS)        + = LS(SEMICOLON)     ^ = EQUAL  ~ = LS(EQUAL)
+//   " = LS(N2)  & = LS(N6)  ' = LS(N7)  ( = LS(N8)  ) = LS(N9)
+//   _ = LS(INT1)  \ = INT1  ¥ = INT3  | = LS(INT3)  ` = LS(LEFT_BRACKET)
+// 実際の出力は keymap-drawer/lism.svg（JIS 表記で描画）で確認する。
 
 &mt {
     flavor = "balanced";
@@ -132,7 +141,7 @@
         kakko: kakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INT_HENKAN &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            bindings = <&kp INT_HENKAN &kp LS(N8) &kp LS(N9) &kp LEFT>;
             label = "KAKKO";
         };
 
@@ -183,7 +192,7 @@
         default_layer {
             display-name = "SADBACE";
             bindings = <
-&mt COLON Q    &kp W         &kp E                      &kp R           &kp T                                                 &kp Y             &kp U    &kp I        &kp O       &kp P
+&mt SQT Q      &kp W         &kp E                      &kp R           &kp T                                                 &kp Y             &kp U    &kp I        &kp O       &kp P
 &kp A          &kp S         &kp D                      &kp F           &kp G                                                 &kp H             &kp J    &kp K        &kp L       &mkp LCLK
 &kp Z          &kp X         &kp C                      &kp V           &kp B                                                 &kp N             &lt 8 M  &lt 7 COMMA  &kp PERIOD  &lt 5 MINUS
 &mt LCTRL TAB  &kp LEFT_GUI  &mt LEFT_ALT INT_MUHENKAN  &msc SCRL_UP    &lt 3 SPACE      &mt LSHIFT BACKSPACE    &lt 1 ENTER  &lt 2 INT_HENKAN  &none    &lt 3 TAB    &kp SLASH   &mt RSHIFT DELETE
@@ -194,10 +203,10 @@
         KIGO {
             display-name = "KIGO";
             bindings = <
-&kp COLON      &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS                                   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &trans  &trans
-&kp SEMICOLON  &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &kp ASTERISK                               &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans     &trans  &kp UNDERSCORE
-&kp EQUAL      &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp HASH               &kp PERIOD                                 &kp LS(LC(N))     &trans             &trans     &trans  &kp QMARK
-&kp AT         &trans           &trans                &kp UP_ARROW           &trans           &kp LEFT_SHIFT    &trans  &trans            &trans             &trans     &trans  &kp LA(F4)
+&kp SQT        &kp LS(N7)       &kp LS(N8)            &kp LS(N9)             &kp LS(SEMICOLON)                              &kp RIGHT_BRACKET &kp NON_US_HASH     &kp MINUS  &trans  &trans
+&kp SEMICOLON  &kp DOLLAR       &kp PERCENT           &kp LS(N6)             &kp LS(SQT)                                &kp LS(RIGHT_BRACKET) &kp LS(NON_US_HASH)  &trans     &trans  &kp LS(INT1)
+&kp LS(MINUS)  &kp EXCLAMATION  &kp LS(N2)            &kp HASH               &kp PERIOD                                 &kp LS(LC(N))     &trans             &trans     &trans  &kp QMARK
+&kp LEFT_BRACKET &trans           &trans                &kp UP_ARROW           &trans           &kp LEFT_SHIFT    &trans  &trans            &trans             &trans     &trans  &kp LA(F4)
                                 &kp LEFT              &kp DOWN_ARROW         &kp RIGHT_ARROW                            &trans            &trans             &trans
             >;
         };
@@ -205,9 +214,9 @@
         NUM {
             display-name = "NUM";
             bindings = <
-&kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                  &trans     &kp F7  &kp F8  &kp F9  &kp F10
-&kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK                              &trans     &kp F4  &kp F5  &kp F6  &kp F11
-&kp EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD                                &kp LG(E)  &kp F1  &kp F2  &kp F3  &kp F12
+&kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(SEMICOLON)                              &trans     &kp F7  &kp F8  &kp F9  &kp F10
+&kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LS(SQT)                                &trans     &kp F4  &kp F5  &kp F6  &kp F11
+&kp LS(MINUS) &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD                                &kp LG(E)  &kp F1  &kp F2  &kp F3  &kp F12
 &kp TAB    &kp KP_NUMBER_0  &kp LEFT_ALT     &kp LC(A)        &kp SPACE     &kp BACKSPACE    &kp ENTER  &trans     &trans  &trans  &trans  &tog 0
                             &kp LC(C)        &kp LC(Z)        &kp LC(V)                                 &trans     &trans  &trans
             >;
