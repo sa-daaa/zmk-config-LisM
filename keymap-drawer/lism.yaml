@@ -51,7 +51,7 @@ layers:
   - ''
   KIGO:
   - ':'
-  - SQT
+  - ''''
   - (
   - )
   - +
@@ -69,7 +69,7 @@ layers:
   - '}'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - UNDERSCORE
+  - _
   - '='
   - '!'
   - '"'
@@ -80,7 +80,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - QMARK
-  - AT
+  - '@'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:arrow-up-bold$$
