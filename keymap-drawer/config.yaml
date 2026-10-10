@@ -72,27 +72,27 @@ parse_config:
       tap: $$mdi:backspace$$
       shifted: $$mdi:backspace-reverse-outline$$
 
-    # Bluetooth
+    # Bluetooth（番号は ZMK / Keymap Editor と同じ 0 始まり: BT_SEL 1 → 1）
     "&bt BT_SEL 0":
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
-      hold: 1
+      hold: 0
     "&bt BT_SEL 1":
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
-      hold: 2
+      hold: 1
     "&bt BT_SEL 2":
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
-      hold: 3
+      hold: 2
     "&bt BT_SEL 3":
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
-      hold: 4
+      hold: 3
     "&bt BT_SEL 4":
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
-      hold: 5
+      hold: 4
     "&out OUT_TOG":
       shifted: $$mdi:usb$$
       tap: $$mdi:toggle-switch$$
