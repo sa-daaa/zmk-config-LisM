@@ -53,7 +53,6 @@
         layers = <5>;
         input-processors =
             <&zip_xy_to_scroll_mapper>,
-            <&zip_scroll_scaler 1 16>,
             <&scroll_runtime_input_processor>;   // スクロール速度などを DYA Studio から調整
     };
 };
@@ -65,4 +64,31 @@
         #input-processor-cells = <2>;
         require-prior-idle-ms = <350>;
     };
+};
+// ========================================
+// DYA Studio から調整できるカーソル／スクロール処理の初期値
+// （DYA Studio の「トラックボール」で変更・保存した値がある場合はそちらが優先。
+//   初期値に戻すには DYA Studio の「リセット」）
+// ========================================
+
+// カーソル: 素早く弾いたときだけ慣性で少し流れる（LalaPadGen2 の挙動を参考）
+&mouse_runtime_input_processor {
+    inertia-enabled;
+    inertia-window-ms = <100>;         // 弾いた速さを測る時間
+    inertia-interval-ms = <10>;        // 慣性で動かす間隔（短いほど滑らか）
+    inertia-threshold = <150>;         // これ以上速く弾いたときだけ慣性が出る（細かい操作では出ない）
+    inertia-decay-percent = <5>;       // 1回ごとの減速率（小さいほど長く流れる）
+    inertia-fast-threshold = <0>;      // 2段階目の加速は使わない
+};
+
+// スクロール: 速度 1/16（従来と同じ）＋慣性
+&scroll_runtime_input_processor {
+    scale-multiplier = <1>;
+    scale-divisor = <16>;
+    inertia-enabled;
+    inertia-window-ms = <100>;
+    inertia-interval-ms = <20>;
+    inertia-threshold = <6>;           // スクロール量（1/16 後）で判定
+    inertia-decay-percent = <3>;
+    inertia-fast-threshold = <0>;
 };
