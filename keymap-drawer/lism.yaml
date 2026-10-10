@@ -34,7 +34,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: Ctrl}
   - Win
   - {t: 無変換, h: Alt}
-  - $$mdi:pan-up$$
+  - ↑
   - {t: '$$mdi:keyboard-space$$', h: ARROW}
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: KIGO}
@@ -43,9 +43,9 @@ layers:
   - ''
   - /
   - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:pan-left$$
-  - $$mdi:pan-down$$
-  - $$mdi:pan-right$$
+  - ←
+  - ↓
+  - →
   - ''
   - ''
   - ''
@@ -237,8 +237,8 @@ layers:
   - NUM
   - {t: ▽, type: trans}
   - $$mdi:keyboard-esc$$
-  - {t: ▽, type: trans}
-  - $$mdi:backspace-reverse-outline$$
+  - Alt+←
+  - Alt+→
   - ←
   - ↓
   - →
