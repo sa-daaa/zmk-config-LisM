@@ -31,9 +31,9 @@ layers:
   - {t: ',', h: GESTURE}
   - .
   - {t: '-', h: SCROLL}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
-  - $$mdi:apple-keyboard-command$$
-  - {t: 無変換, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: Ctrl}
+  - Win
+  - {t: 無変換, h: Alt}
   - $$mdi:pan-up$$
   - {t: '$$mdi:keyboard-space$$', h: ARROW}
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
@@ -83,7 +83,7 @@ layers:
   - '@'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:arrow-up-bold$$
+  - ↑
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-shift$$
   - {type: held}
@@ -92,9 +92,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Alt+F4
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - ←
+  - ↓
+  - →
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -124,14 +124,14 @@ layers:
   - KP 2
   - KP 3
   - .
-  - Gui+E
+  - Win+E
   - F1
   - F2
   - F3
   - F12
   - $$mdi:keyboard-tab$$
   - KP 0
-  - $$mdi:apple-keyboard-option$$
+  - Alt
   - Ctl+A
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -149,24 +149,24 @@ layers:
   - {t: ▽, type: trans}
   ARROW:
   - Ctl+HOME
-  - Ctl+Sft+$$mdi:keyboard-tab$$
-  - $$mdi:arrow-up-bold$$
-  - Ctl+$$mdi:keyboard-tab$$
+  - Ctl+Sft+Tab
+  - ↑
+  - Ctl+Tab
   - Ctl+END
   - {t: ▽, type: trans}
-  - Alt+$$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
-  - Alt+$$mdi:arrow-right-bold$$
+  - Alt+←
+  - ↑
+  - Alt+→
   - {t: ▽, type: trans}
   - HOME
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - ←
+  - ↓
+  - →
   - END
   - PgUp
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
+  - ←
+  - ↓
+  - →
   - PgDn
   - Sft+HOME
   - {t: ▽, type: trans}
@@ -178,7 +178,7 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+PgDn
   - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-control$$
+  - Ctrl
   - $$mdi:keyboard-esc$$
   - {t: ▽, type: trans}
   - PgUp
@@ -197,51 +197,51 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   MOUSE:
-  - '&to_layer_0 Q'
-  - '&to_layer_0 W'
-  - '&to_layer_0 E'
-  - '&to_layer_0 R'
-  - '&to_layer_0 T'
-  - '&to_layer_0 Y'
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
   - Ctl+C
-  - '&to_layer_0 LC(V)'
-  - '&to_layer_0 O'
-  - '&to_layer_0 P'
-  - '&to_layer_0 A'
-  - '&to_layer_0 S'
-  - '&to_layer_0 D'
-  - '&to_layer_0 F'
-  - '&to_layer_0 G'
-  - '&to_layer_0 H'
-  - '&to_layer_0 J'
-  - '&to_layer_0 K'
-  - '&to_layer_0 L'
-  - '&mkp_exit_AML LCLK'
-  - '&to_layer_0 Z'
-  - '&to_layer_0 X'
-  - '&to_layer_0 C'
-  - '&to_layer_0 V'
-  - '&to_layer_0 B'
-  - '&to_layer_0 N'
-  - {t: '&to_layer_0 M', h: GESTURE2}
-  - {t: '&to_layer_0 COMMA', h: GESTURE}
-  - '&to_layer_0 PERIOD'
-  - {t: '&to_layer_0 SLASH', h: SCROLL}
-  - '&to_layer_0 TAB'
-  - $$mdi:apple-keyboard-command$$
-  - '&to_layer_0 INT_MUHENKAN'
-  - '&to_layer_0 UP'
-  - '&to_layer3'
-  - '&to_layer_0 BACKSPACE'
-  - '&to_layer1'
-  - '&to_layer2'
+  - Ctl+V
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - $$mdi:mouse-left-click-outline$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - {t: M, h: GESTURE2}
+  - {t: ',', h: GESTURE}
+  - .
+  - {t: /, h: SCROLL}
+  - $$mdi:keyboard-tab$$
+  - Win
+  - 無変換
+  - ↑
+  - ARROW
+  - $$mdi:backspace$$
+  - KIGO
+  - NUM
   - {t: ▽, type: trans}
-  - '&to_layer_0 ESCAPE'
+  - $$mdi:keyboard-esc$$
   - {t: ▽, type: trans}
-  - '&to_layer_0 DELETE'
-  - '&to_layer_0 LEFT'
-  - '&to_layer_0 DOWN'
-  - '&to_layer_0 RIGHT'
+  - $$mdi:backspace-reverse-outline$$
+  - ←
+  - ↓
+  - →
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -443,7 +443,7 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [8, 9]
-  k: Gui+L
+  k: Win+L
 - p: [39, 40, 41]
   k: {t: NUM, h: toggle}
 - p: [5, 6]
@@ -451,13 +451,13 @@ combos:
 - p: [15, 16]
   k: {h: '2', s: '$$mdi:bluetooth-connect$$'}
 - p: [4, 14]
-  k: Gui+Sft+$$mdi:arrow-left-bold$$
+  k: Win+Sft+←
 - p: [30, 31]
   k: $$mdi:printer-outline$$
 - p: [20, 21]
-  k: Gui+Sft+S
+  k: Win+Sft+S
 - p: [5, 15]
-  k: Gui+$$mdi:arrow-up-bold$$
+  k: Win+↑
 - p: [19, 18]
   k: $$mdi:mouse-right-click-outline$$
 - p: [2, 3, 4]
