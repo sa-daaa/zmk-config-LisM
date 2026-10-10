@@ -1,5 +1,6 @@
 # This file generates the GitHub Actions matrix.
 # 構成: 左手 = 4way スティック（Peripheral） / 右手 = トラックボール（Central）
+# 右手は DYA Studio（ZMK Studio 互換）対応。ブラウザからキーマップ等を変更できる
 # 他の構成（non-trackball など）は git 履歴を参照
 ---
 include:
@@ -9,13 +10,8 @@ include:
     artifact-name: lism_left_peripheral_4waystick
   - board: xiao_ble//zmk
     shield: lism_right rgbled_adapter
-    snippet: trackball-central
-    artifact-name: lism_right_central_trackball
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-  - board: xiao_ble//zmk
-    shield: lism_right rgbled_adapter
-    artifact-name: lism_right_central_trackball_studio
     snippet: "studio-rpc-usb-uart trackball-central"
+    artifact-name: lism_right_central_trackball
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
 
   # Reset

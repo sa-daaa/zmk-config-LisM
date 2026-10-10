@@ -12,11 +12,14 @@ manifest:
       url-base: https://github.com/kot149
     - name: ssbb
       url-base: https://github.com/ssbb
+    - name: cormoran
+      url-base: https://github.com/cormoran
   projects:
+    # ZMK: DYA Studio 用カスタム RPC サブシステム付き cormoran fork（ZMK v4/Zephyr 4.1）
+    # roBa と同じ構成。ブラウザ（https://studio.dya.cormoran.works）から設定変更できる
     - name: zmk
-      remote: zmkfirmware
-      # main branch @ 2026-08-06 (Zephyr v4.1.0+zmk-fixes)
-      revision: 268b1b1e82150460f00fd701bcd08583d5c75d29
+      remote: cormoran
+      revision: main+dya
       import: app/west.yml
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
@@ -35,5 +38,29 @@ manifest:
     - name: zmk-listeners
       remote: ssbb
       revision: v1
+    # DYA Studio モジュール（すべて cormoran リポジトリ、main+dya と同じ main 追従）
+    - name: zmk-module-ble-management
+      remote: cormoran
+      revision: main
+    - name: zmk-module-battery-history
+      remote: cormoran
+      revision: main
+    - name: zmk-module-settings-rpc
+      remote: cormoran
+      revision: main
+    - name: zmk-module-runtime-input-processor
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-custom-settings
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-runtime-macro
+      remote: cormoran
+      revision: main
+      import: true
+    - name: zmk-feature-runtime-combo
+      remote: cormoran
+      revision: main
+      import: true
   self:
     path: config
