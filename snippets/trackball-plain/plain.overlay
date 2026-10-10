@@ -1,0 +1,7 @@
+// 切り分け用: カーソルの経路から DYA の runtime input processor を外す
+// （trackball-central の後に適用して上書きする。スクロール側はそのまま）
+&central_listener {
+    input-processors =
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_temp_layer 4 5000>;
+};
