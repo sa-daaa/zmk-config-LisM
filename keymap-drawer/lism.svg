@@ -1547,27 +1547,27 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(544, 32)" class="key keypos-5">
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key"/>
-<text x="0" y="28" class="key hold">1</text>
+<text x="0" y="28" class="key hold">0</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-5" y="-28" height="10" width="10.0" class="key shifted glyph mdi:bluetooth-connect"/>
 </g>
 <g transform="translate(608, 32)" class="key keypos-6">
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key"/>
-<text x="0" y="28" class="key hold">2</text>
+<text x="0" y="28" class="key hold">1</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-5" y="-28" height="10" width="10.0" class="key shifted glyph mdi:bluetooth-connect"/>
 </g>
 <g transform="translate(672, 32)" class="key keypos-7">
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key"/>
-<text x="0" y="28" class="key hold">3</text>
+<text x="0" y="28" class="key hold">2</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-5" y="-28" height="10" width="10.0" class="key shifted glyph mdi:bluetooth-connect"/>
 </g>
 <g transform="translate(736, 32)" class="key keypos-8">
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key"/>
-<text x="0" y="28" class="key hold">4</text>
+<text x="0" y="28" class="key hold">3</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-5" y="-28" height="10" width="10.0" class="key shifted glyph mdi:bluetooth-connect"/>
 </g>
 <g transform="translate(800, 32)" class="key keypos-9">
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key"/>
-<text x="0" y="28" class="key hold">5</text>
+<text x="0" y="28" class="key hold">4</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-5" y="-28" height="10" width="10.0" class="key shifted glyph mdi:bluetooth-connect"/>
 </g>
 <g transform="translate(32, 96)" class="key trans keypos-10">
@@ -2433,7 +2433,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(0, 28)">
 <g transform="translate(26, 16)" class="key  combo-separate keypos-0">
 <rect rx="6" ry="6" x="-24" y="-14" width="47" height="28" class="key  combo-separate"/>
-<text x="0" y="12" class="key  combo-separate hold">2</text>
+<text x="0" y="12" class="key  combo-separate hold">1</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-5" y="-12" height="10" width="10.0" class="key  combo-separate shifted glyph mdi:bluetooth-connect"/>
 </g>
 <g transform="translate(16, 50)" class="key keypos-1">
@@ -2586,7 +2586,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(0, 28)">
 <g transform="translate(26, 16)" class="key  combo-separate keypos-0">
 <rect rx="6" ry="6" x="-24" y="-14" width="47" height="28" class="key  combo-separate"/>
-<text x="0" y="12" class="key  combo-separate hold">3</text>
+<text x="0" y="12" class="key  combo-separate hold">2</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-5" y="-12" height="10" width="10.0" class="key  combo-separate shifted glyph mdi:bluetooth-connect"/>
 </g>
 <g transform="translate(16, 50)" class="key keypos-1">
