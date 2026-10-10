@@ -463,4 +463,4 @@ combos:
 - p: [2, 3, 4]
   k: {t: BLUETOOTH, h: toggle}
 - p: [17, 18]
-  k: {t: SCROLL, h: toggle}
+  k: SCROLL
