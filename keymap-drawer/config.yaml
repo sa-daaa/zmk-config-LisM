@@ -274,6 +274,13 @@ parse_config:
     RGUI: $$mdi:apple-keyboard-command$$
     #RG: $$mdi:apple-keyboard-command$$
     PSCRN: $$mdi:printer-outline$$
+    PRINTSCREEN: $$mdi:printer-outline$$
+    # 日本語キー（短く表示）
+    INT_HENKAN: "変換"
+    INT_MUHENKAN: "無変換"
+    INT_KATAKANAHIRAGANA: "かな"
+    LANG1: "かな"
+    LANG2: "英数"
     RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
     PAGE_UP:
       tap: 'PgUp'
@@ -326,3 +333,9 @@ draw_config:
   dark_mode: auto
   glyph_tap_size: 18
   footer_text: 'LisM KEYMAPS | Created with keymap-drawer' 
+
+  # 文字の重なり対策
+  key_h: 64                       # キーを大きく（既定 56）
+  shrink_wide_legends: 5          # 5文字を超える表記は縮小
+  separate_combo_diagrams: true   # コンボはキーの上に重ねず、レイヤーの下に別図で表示
+  combo_diagrams_scale: 2
