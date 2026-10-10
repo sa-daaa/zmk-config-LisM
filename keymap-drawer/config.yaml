@@ -1,5 +1,62 @@
 parse_config:
+  modifier_fn_map:
+    left_gui: "Win"
+    right_gui: "Win"
+
   raw_binding_map:
+    # MOUSE レイヤーの独自ビヘイビア（キーを送ってレイヤー0に戻る）
+    "&to_layer_0 A": "A"
+    "&to_layer_0 B": "B"
+    "&to_layer_0 C": "C"
+    "&to_layer_0 D": "D"
+    "&to_layer_0 E": "E"
+    "&to_layer_0 F": "F"
+    "&to_layer_0 G": "G"
+    "&to_layer_0 H": "H"
+    "&to_layer_0 I": "I"
+    "&to_layer_0 J": "J"
+    "&to_layer_0 K": "K"
+    "&to_layer_0 L": "L"
+    "&to_layer_0 M": "M"
+    "&to_layer_0 N": "N"
+    "&to_layer_0 O": "O"
+    "&to_layer_0 P": "P"
+    "&to_layer_0 Q": "Q"
+    "&to_layer_0 R": "R"
+    "&to_layer_0 S": "S"
+    "&to_layer_0 T": "T"
+    "&to_layer_0 U": "U"
+    "&to_layer_0 V": "V"
+    "&to_layer_0 W": "W"
+    "&to_layer_0 X": "X"
+    "&to_layer_0 Y": "Y"
+    "&to_layer_0 Z": "Z"
+    "&to_layer_0 TAB": "$$mdi:keyboard-tab$$"
+    "&to_layer_0 SPACE": "$$mdi:keyboard-space$$"
+    "&to_layer_0 BACKSPACE": "$$mdi:backspace$$"
+    "&to_layer_0 DELETE": "$$mdi:backspace-reverse-outline$$"
+    "&to_layer_0 ESCAPE": "$$mdi:keyboard-esc$$"
+    "&to_layer_0 ENTER": "$$mdi:keyboard-return$$"
+    "&to_layer_0 INT_MUHENKAN": "無変換"
+    "&to_layer_0 INT_HENKAN": "変換"
+    "&to_layer_0 UP": "↑"
+    "&to_layer_0 DOWN": "↓"
+    "&to_layer_0 LEFT": "←"
+    "&to_layer_0 RIGHT": "→"
+    "&to_layer_0 LC(V)": "Ctl+V"
+    "&to_layer_0 LC(C)": "Ctl+C"
+    "&to_layer_0 PERIOD": "."
+    "&to_layer_0 COMMA": ","
+    "&to_layer_0 SLASH": "/"
+    "&to_layer_0 MINUS": "-"
+    "&mkp_exit_AML LCLK": $$mdi:mouse-left-click-outline$$
+    "&mkp_exit_AML MB1": $$mdi:mouse-left-click-outline$$
+    "&mkp_exit_AML RCLK": $$mdi:mouse-right-click-outline$$
+    "&mkp_exit_AML MB2": $$mdi:mouse-right-click-outline$$
+    # タップ中だけそのレイヤーに切り替わるマクロ
+    "&to_layer1": "KIGO"
+    "&to_layer2": "NUM"
+    "&to_layer3": "ARROW"
     # self behaviors
     "&kp RG(LEFT)":
       tap: $$mdi:page-previous-outline$$
@@ -137,6 +194,11 @@ parse_config:
     RIGHT: "→"
     UP: "↑"
     DOWN: "↓"
+    # 矢印は文字で表示（記号アイコンだと Alt+← などの修飾キーが消えるため）
+    LEFT_ARROW: "←"
+    RIGHT_ARROW: "→"
+    UP_ARROW: "↑"
+    DOWN_ARROW: "↓"
     # JIS: Shift なし
     SEMICOLON: ";"
     SEMI: ";"
@@ -251,27 +313,27 @@ parse_config:
     RBRC: "⚠{"
 
     # Modifiers
-    LCTRL: $$mdi:apple-keyboard-control$$
-    LEFT_CONTROL: $$mdi:apple-keyboard-control$$
-    LALT: $$mdi:apple-keyboard-option$$
-    LEFT_ALT: $$mdi:apple-keyboard-option$$
+    LCTRL: "Ctrl"
+    LEFT_CONTROL: "Ctrl"
+    LALT: "Alt"
+    LEFT_ALT: "Alt"
     LSHIFT: $$mdi:apple-keyboard-shift$$
     LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
     LSHFT: $$mdi:apple-keyboard-shift$$
-    LCMD: $$mdi:apple-keyboard-command$$
-    LGUI: $$mdi:apple-keyboard-command$$
+    LCMD: "Win"
+    LGUI: "Win"
     #LG: $$mdi:apple-keyboard-command$$
-    LEFT_GUI: $$mdi:apple-keyboard-command$$
-    LEFT_COMMAND: $$mdi:apple-keyboard-command$$
-    RCTRL: $$mdi:apple-keyboard-control$$
-    RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
-    RALT: $$mdi:apple-keyboard-option$$
-    RIGHT_ALT: $$mdi:apple-keyboard-option$$
+    LEFT_GUI: "Win"
+    LEFT_COMMAND: "Win"
+    RCTRL: "Ctrl"
+    RIGHT_CONTROL: "Ctrl"
+    RALT: "Alt"
+    RIGHT_ALT: "Alt"
     RSHIFT: $$mdi:apple-keyboard-shift$$
     RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
     RSHFT: $$mdi:apple-keyboard-shift$$
-    RCMD: $$mdi:apple-keyboard-command$$
-    RGUI: $$mdi:apple-keyboard-command$$
+    RCMD: "Win"
+    RGUI: "Win"
     #RG: $$mdi:apple-keyboard-command$$
     PSCRN: $$mdi:printer-outline$$
     PRINTSCREEN: $$mdi:printer-outline$$
@@ -281,7 +343,7 @@ parse_config:
     INT_KATAKANAHIRAGANA: "かな"
     LANG1: "かな"
     LANG2: "英数"
-    RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
+    RIGHT_COMMAND: "Win"
     PAGE_UP:
       tap: 'PgUp'
       shifted: ''
@@ -294,15 +356,6 @@ parse_config:
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
 
-    # Arrows
-    UP: $$mdi:arrow-up-bold$$
-    UP_ARROW: $$mdi:arrow-up-bold$$
-    DOWN: $$mdi:arrow-down-bold$$
-    DOWN_ARROW: $$mdi:arrow-down-bold$$
-    LEFT_ARROW: $$mdi:arrow-left-bold$$
-    LEFT: $$mdi:arrow-left-bold$$
-    RIGHT: $$mdi:arrow-right-bold$$
-    RIGHT_ARROW: $$mdi:arrow-right-bold$$
 
     # Whitespace
     ENTER:
@@ -315,6 +368,12 @@ parse_config:
     ESCAPE: $$mdi:keyboard-esc$$
     TAB: $$mdi:keyboard-tab$$
     LS(TAB): $$mdi:keyboard-tab-reverse$$
+    # 修飾キー付き Tab（アイコンだと修飾キーが消えるため文字で表示）
+    LC(TAB): "Ctl+Tab"
+    LC(LS(TAB)): "Ctl+Sft+Tab"
+    LS(LC(TAB)): "Ctl+Sft+Tab"
+    LA(TAB): "Alt+Tab"
+    LG(TAB): "Win+Tab"
     SPACE: $$mdi:keyboard-space$$
     BACKSPACE:
       type: backspace
