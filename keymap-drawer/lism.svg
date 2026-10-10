@@ -1426,17 +1426,14 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(160, 32)" class="key trans keypos-2">
-<rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(160, 32)" class="key held keypos-2">
+<rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key held"/>
 </g>
-<g transform="translate(224, 32)" class="key trans keypos-3">
-<rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(224, 32)" class="key held keypos-3">
+<rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key held"/>
 </g>
-<g transform="translate(288, 32)" class="key trans keypos-4">
-<rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(288, 32)" class="key held keypos-4">
+<rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key held"/>
 </g>
 <g transform="translate(544, 32)" class="key keypos-5">
 <rect rx="6" ry="6" x="-30" y="-30" width="60" height="60" class="key"/>
@@ -3398,8 +3395,7 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-24" y="-14" width="47" height="28" class="key  combo-separate"/>
 <a href="#BLUETOOTH">
 <text x="0" y="0" class="key  combo-separate tap layer-activator"><tspan style="font-size: 62%">BLUETOO…</tspan></text>
-</a><text x="0" y="12" class="key  combo-separate hold"><tspan style="font-size: 83%">toggle</tspan></text>
-</g>
+</a></g>
 <g transform="translate(16, 50)" class="key keypos-1">
 <rect rx="6" ry="6" x="-14" y="-14" width="28" height="28" class="key"/>
 </g>

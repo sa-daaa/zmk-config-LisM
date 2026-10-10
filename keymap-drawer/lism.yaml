@@ -297,9 +297,9 @@ layers:
   BLUETOOTH:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {type: held}
   - {h: '0', s: '$$mdi:bluetooth-connect$$'}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
@@ -461,6 +461,6 @@ combos:
 - p: [19, 18]
   k: $$mdi:mouse-right-click-outline$$
 - p: [2, 3, 4]
-  k: {t: BLUETOOTH, h: toggle}
+  k: BLUETOOTH
 - p: [17, 18]
   k: SCROLL
