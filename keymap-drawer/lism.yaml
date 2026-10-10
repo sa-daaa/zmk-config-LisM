@@ -33,12 +33,12 @@ layers:
   - {t: '-', h: SCROLL}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:apple-keyboard-command$$
-  - {t: INT MUHENKAN, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: 無変換, h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:pan-up$$
   - {t: '$$mdi:keyboard-space$$', h: ARROW}
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: KIGO}
-  - {t: INT HENKAN, h: NUM}
+  - {t: 変換, h: NUM}
   - ''
   - {t: '$$mdi:keyboard-tab$$', h: ARROW}
   - /
@@ -453,7 +453,7 @@ combos:
 - p: [4, 14]
   k: Gui+Sft+$$mdi:arrow-left-bold$$
 - p: [30, 31]
-  k: PRINTSCREEN
+  k: $$mdi:printer-outline$$
 - p: [20, 21]
   k: Gui+Sft+S
 - p: [5, 15]
