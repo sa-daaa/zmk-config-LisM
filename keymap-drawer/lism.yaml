@@ -30,7 +30,7 @@ layers:
   - {t: M, h: GESTURE2}
   - {t: ',', h: GESTURE}
   - .
-  - {t: '-', h: SCROLL}
+  - '-'
   - {t: '$$mdi:keyboard-tab$$', h: Ctrl}
   - Win
   - {t: 無変換, h: Alt}
@@ -462,3 +462,5 @@ combos:
   k: $$mdi:mouse-right-click-outline$$
 - p: [2, 3, 4]
   k: {t: BLUETOOTH, h: toggle}
+- p: [17, 18]
+  k: {t: SCROLL, h: toggle}
