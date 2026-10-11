@@ -1,3 +1,0 @@
-name: trackball-plain
-append:
-  EXTRA_DTC_OVERLAY_FILE: plain.overlay

@@ -30,8 +30,7 @@
     device = <&trackball_central>;
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_temp_layer 4 5000>,
-        <&mouse_runtime_input_processor>;   // カーソル速度などを DYA Studio から調整
+        <&zip_temp_layer 4 5000>;
 
     gesture {
         layers = <7>;
@@ -66,20 +65,12 @@
     };
 };
 // ========================================
-// DYA Studio から調整できるカーソル／スクロール処理の初期値
+// DYA Studio から調整できるスクロール処理の初期値
+// ※カーソルには runtime input processor を通さない（通すとカーソルが小さく・カクカクになったため）
 // （DYA Studio の「トラックボール」で変更・保存した値がある場合はそちらが優先。
 //   初期値に戻すには DYA Studio の「リセット」）
 // ========================================
 
-// カーソル: 素早く弾いたときだけ慣性で少し流れる（LalaPadGen2 の挙動を参考）
-&mouse_runtime_input_processor {
-    inertia-enabled;
-    inertia-window-ms = <100>;         // 弾いた速さを測る時間
-    inertia-interval-ms = <10>;        // 慣性で動かす間隔（短いほど滑らか）
-    inertia-threshold = <150>;         // これ以上速く弾いたときだけ慣性が出る（細かい操作では出ない）
-    inertia-decay-percent = <5>;       // 1回ごとの減速率（小さいほど長く流れる）
-    inertia-fast-threshold = <0>;      // 2段階目の加速は使わない
-};
 
 // スクロール: 速度 1/16（従来と同じ）＋慣性
 &scroll_runtime_input_processor {
