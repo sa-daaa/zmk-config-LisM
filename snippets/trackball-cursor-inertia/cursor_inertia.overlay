@@ -1,0 +1,35 @@
+// カーソル用の runtime input processor（慣性つき）
+// 過去に "mouse" で保存された設定を引き継がないよう、新しいラベル "cursor" を使う
+/ {
+    cursor_runtime_input_processor: cursor_runtime_input_processor {
+        compatible = "zmk,input-processor-runtime";
+        processor-label = "cursor";
+        type = <INPUT_EV_REL>;
+        x-codes = <INPUT_REL_X>;
+        y-codes = <INPUT_REL_Y>;
+        scale-multiplier = <1>;
+        scale-divisor = <1>;
+        rotation-degrees = <0>;
+        track-remainders;
+
+        inertia-enabled;
+        inertia-window-ms = <100>;       // 弾いた速さを測る時間
+        inertia-interval-ms = <15>;      // 慣性で動かす間隔
+        inertia-threshold = <150>;       // これ以上速く弾いたときだけ慣性が出る
+        inertia-decay-percent = <6>;     // 1回ごとの減速率（小さいほど長く流れる）
+        inertia-fast-threshold = <0>;    // 2段階目の加速は使わない
+
+        temp-layer-transparent-behavior = <&trans>;
+        temp-layer-kp-behavior = <&kp>;
+        temp-layer-keep-keycodes = <LEFT_CONTROL LEFT_SHIFT LEFT_ALT LEFT_GUI RIGHT_CONTROL RIGHT_SHIFT RIGHT_ALT RIGHT_GUI>;
+
+        #input-processor-cells = <0>;
+    };
+};
+
+&central_listener {
+    input-processors =
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_temp_layer 4 5000>,
+        <&cursor_runtime_input_processor>;
+};
