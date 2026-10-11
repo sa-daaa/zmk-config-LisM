@@ -1,4 +1,0 @@
-name: trackball-cursor-inertia
-append:
-  EXTRA_DTC_OVERLAY_FILE: cursor_inertia.overlay
-  EXTRA_CONF_FILE: cursor_inertia.conf

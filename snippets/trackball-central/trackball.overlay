@@ -30,7 +30,8 @@
     device = <&trackball_central>;
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_temp_layer 4 5000>;
+        <&zip_temp_layer 4 5000>,
+        <&cursor_runtime_input_processor>;   // カーソル速度・慣性を DYA Studio（"cursor"）から調整
 
     gesture {
         layers = <7>;
@@ -65,8 +66,8 @@
     };
 };
 // ========================================
-// DYA Studio から調整できるスクロール処理の初期値
-// ※カーソルには runtime input processor を通さない（通すとカーソルが小さく・カクカクになったため）
+// DYA Studio から調整できるカーソル／スクロール処理の初期値
+// ※カーソルは過去の "mouse" 保存設定を引き継がないよう、新ラベル "cursor" の processor を使う
 // （DYA Studio の「トラックボール」で変更・保存した値がある場合はそちらが優先。
 //   初期値に戻すには DYA Studio の「リセット」）
 // ========================================
@@ -82,4 +83,32 @@
     inertia-threshold = <6>;           // スクロール量（1/16 後）で判定
     inertia-decay-percent = <3>;
     inertia-fast-threshold = <0>;
+};
+
+// カーソル: 素早く弾いたときだけ慣性で少し流れる
+/ {
+    cursor_runtime_input_processor: cursor_runtime_input_processor {
+        compatible = "zmk,input-processor-runtime";
+        processor-label = "cursor";
+        type = <INPUT_EV_REL>;
+        x-codes = <INPUT_REL_X>;
+        y-codes = <INPUT_REL_Y>;
+        scale-multiplier = <1>;
+        scale-divisor = <1>;
+        rotation-degrees = <0>;
+        track-remainders;
+
+        inertia-enabled;
+        inertia-window-ms = <100>;       // 弾いた速さを測る時間
+        inertia-interval-ms = <15>;      // 慣性で動かす間隔
+        inertia-threshold = <150>;       // これ以上速く弾いたときだけ慣性が出る
+        inertia-decay-percent = <6>;     // 1回ごとの減速率（小さいほど長く流れる）
+        inertia-fast-threshold = <0>;    // 2段階目の加速は使わない
+
+        temp-layer-transparent-behavior = <&trans>;
+        temp-layer-kp-behavior = <&kp>;
+        temp-layer-keep-keycodes = <LEFT_CONTROL LEFT_SHIFT LEFT_ALT LEFT_GUI RIGHT_CONTROL RIGHT_SHIFT RIGHT_ALT RIGHT_GUI>;
+
+        #input-processor-cells = <0>;
+    };
 };

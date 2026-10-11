@@ -14,13 +14,6 @@ include:
     artifact-name: lism_right_central_trackball
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
 
-  # テスト版（一時的）: カーソルに慣性をつけた版
-  - board: xiao_ble//zmk
-    shield: lism_right rgbled_adapter
-    snippet: "studio-rpc-usb-uart trackball-central trackball-cursor-inertia"
-    artifact-name: lism_right_central_trackball_TEST_cursor_inertia
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-
   # Reset
   - board: xiao_ble//zmk
     shield: settings_reset
